@@ -1,11 +1,9 @@
-from flask import Flask, jsonify, request, url_for
+from flask import Flask,jsonify, request, url_for
 from markupsafe import escape
 from data import BOOKS
 
 app = Flask(__name__)
 
-
-# Trang chủ
 @app.route("/")
 def home():
     total = len(BOOKS)
@@ -25,9 +23,6 @@ def home():
         Xem danh sách sách
     </a>
     """
-
-
-# Danh sách sách + lọc theo category
 @app.route("/books")
 def books():
     category = request.args.get("category", "").strip()
@@ -91,8 +86,6 @@ def books():
 
     return html
 
-
-# Chi tiết sách
 @app.route("/books/<int:book_id>")
 def book_detail(book_id):
     book = next(
@@ -130,14 +123,10 @@ def book_detail(book_id):
     </a>
     """
 
-
-# API danh sách sách
 @app.route("/api/books")
 def api_books():
     return jsonify(BOOKS)
 
-
-# API chi tiết sách
 @app.route("/api/books/<int:book_id>")
 def api_book_detail(book_id):
     book = next(
@@ -152,8 +141,6 @@ def api_book_detail(book_id):
 
     return jsonify(book)
 
-
-# Trang 404 dùng chung
 @app.errorhandler(404)
 def not_found(error):
     return """
@@ -163,7 +150,6 @@ def not_found(error):
 
     <a href="/">Về trang chủ</a>
     """, 404
-
 
 if __name__ == "__main__":
     app.run(debug=True)
