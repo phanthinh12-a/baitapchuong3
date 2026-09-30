@@ -2,7 +2,7 @@ BOOKS = [
     {
         "id": 1,
         "title": "Lập trình Python",
-        "author": "Nguyễn Văn A",
+        "author": "Nguyễn Văn Thinh",
         "year": 2024,
         "category": "Lập trình",
         "available": True
@@ -10,7 +10,7 @@ BOOKS = [
     {
         "id": 2,
         "title": "Cơ sở dữ liệu nâng cao",
-        "author": "Trần Văn B",
+        "author": "Trần Văn Nam",
         "year": 2023,
         "category": "Database",
         "available": True
@@ -18,7 +18,7 @@ BOOKS = [
     {
         "id": 3,
         "title": "Cấu trúc dữ liệu và giải thuật",
-        "author": "Lê Thị C",
+        "author": "Lê Thị Cuong",
         "year": 2022,
         "category": "Lập trình",
         "available": False
@@ -26,7 +26,7 @@ BOOKS = [
     {
         "id": 4,
         "title": "Kỹ thuật phần mềm",
-        "author": "Phạm Văn D",
+        "author": "Phạm Văn Dong",
         "year": 2023,
         "category": "Software",
         "available": True
